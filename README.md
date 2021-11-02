@@ -1,5 +1,5 @@
 # datashakereviewsapi
-# DATASHAKE REVIES API
+# DATASHAKE REVIEWS API
 
 Unofficial python API to DATASHAKE reviews API (https://www.datashake.com/review-scraper-api)
 This module makes it easier to schedule jobs and fetch the results
