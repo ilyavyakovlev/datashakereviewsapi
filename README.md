@@ -1,6 +1,6 @@
-# datashakereviewsapi: python API to DATASHAKE reviews
+# datashakereviewsapi: python API-wrapper to DATASHAKE reviews
 
-Python API to DATASHAKE reviews (https://www.datashake.com/review-scraper-api)
+Python API-wrapper for DATASHAKE reviews API (https://www.datashake.com/review-scraper-api)
 This module makes it easier to schedule jobs and fetch the results
 Official web API documentation: https://api.datashake.com/#reviews
 You need to have datashake API key to use this module
