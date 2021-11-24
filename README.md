@@ -8,13 +8,15 @@ You need to have datashake API key to use this module
 
 ## Installation
 
-Through cloning this repositary only. [at the moment]
+```sh
+pip install git+https://github.com/ilyavyakovlev/datashakereviewsapi
+```
 
 ## Usage examples
 
 Initiate API instance
 ```sh
-from datashakereviewsapi.datashakereviewsapi import DatashakeReviewAPI
+from datashakereviewsapi import DatashakeReviewAPI
 
 # Initiate API instance with your API key from DATASHAKE
 api = DatashakeReviewAPI('your_datashake_reviews_scraper_api_key')
