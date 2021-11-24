@@ -1,0 +1,10 @@
+README.md
+setup.cfg
+setup.py
+datashakereviewsapi/__init__.py
+datashakereviewsapi/_api.py
+datashakereviewsapi.egg-info/PKG-INFO
+datashakereviewsapi.egg-info/SOURCES.txt
+datashakereviewsapi.egg-info/dependency_links.txt
+datashakereviewsapi.egg-info/requires.txt
+datashakereviewsapi.egg-info/top_level.txt
