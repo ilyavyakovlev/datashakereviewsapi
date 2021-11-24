@@ -7,77 +7,87 @@
   <meta name="Generator" content="Cocoa HTML Writer">
   <meta name="CocoaVersion" content="1894.6">
   <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; color: #0000e9; -webkit-text-stroke: #0000e9}
-    p.p2 {margin: 0.0px 0.0px 12.0px 0.0px; font: 12.0px Times; color: #000000; -webkit-text-stroke: #000000}
-    p.p3 {margin: 0.0px 0.0px 12.0px 0.0px; font: 10.0px Times; color: #0000e9; -webkit-text-stroke: #0000e9}
-    p.p4 {margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; color: #000000; -webkit-text-stroke: #000000}
-    p.p5 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Menlo; color: #000000; -webkit-text-stroke: #000000}
-    p.p6 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Menlo; color: #000000; -webkit-text-stroke: #000000; min-height: 14.0px}
+    p.p1 {margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; color: #0000e3; -webkit-text-stroke: #0000e3}
+    p.p2 {margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; color: #0000e9; -webkit-text-stroke: #0000e3}
+    p.p3 {margin: 0.0px 0.0px 12.0px 0.0px; font: 12.0px Times; color: #000000; -webkit-text-stroke: #000000}
+    p.p4 {margin: 0.0px 0.0px 12.0px 0.0px; font: 10.0px Times; color: #0000e9; -webkit-text-stroke: #0000e3}
+    p.p5 {margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; color: #000000; -webkit-text-stroke: #000000}
+    p.p6 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Menlo; color: #000000; -webkit-text-stroke: #000000}
     p.p7 {margin: 0.0px 0.0px 12.0px 0.0px; font: 10.0px Times; color: #000000; -webkit-text-stroke: #000000}
     span.s1 {text-decoration: underline ; font-kerning: none}
-    span.s2 {font-kerning: none}
-    span.s3 {font: 12.0px Times; text-decoration: underline ; font-kerning: none}
-    span.s4 {font: 10.0px Times; text-decoration: underline ; font-kerning: none}
-    span.s5 {text-decoration: underline ; font-kerning: none; color: #0000e9; -webkit-text-stroke: 0px #0000e9}
-    span.s6 {font: 10.0px Times; text-decoration: underline ; font-kerning: none; color: #0000e9; -webkit-text-stroke: 0px #0000e9}
+    span.s2 {text-decoration: underline ; font-kerning: none; color: #0000e9}
+    span.s3 {font-kerning: none}
+    span.s4 {font: 12.0px Times; text-decoration: underline ; font-kerning: none}
+    span.s5 {font: 10.0px Times; text-decoration: underline ; font-kerning: none}
+    span.s6 {text-decoration: underline ; font-kerning: none; color: #0000e3; -webkit-text-stroke: 0px #0000e3}
+    span.s7 {font: 10.0px Times; text-decoration: underline ; font-kerning: none; color: #0000e3; -webkit-text-stroke: 0px #0000e3}
   </style>
 </head>
 <body>
 <p class="p1"><span class="s1"><b>TEST</b></span></p>
-<p class="p1"><span class="s1"><a href="https://ilyavyakovlev.github.io/datashakereviewsapi/"><b>datashakereviewsapi</b></a></span></p>
-<p class="p2"><span class="s2">Python API-wrapper for DATASHAKE reviews API</span></p>
-<p class="p3"><span class="s3"><a href="https://github.com/ilyavyakovlev/datashakereviewsapi">View the Project on GitHub <span class="s4">ilyavyakovlev/datashakereviewsapi</span></a></span></p>
-<p class="p4"><span class="s2"><b>datashakereviewsapi: python API-wrapper to DATASHAKE reviews</b></span></p>
-<p class="p2"><span class="s2">Python API-wrapper for DATASHAKE reviews API (https://www.datashake.com/review-scraper-api) This module makes it easier to schedule jobs and fetch the results Official web API documentation: https://api.datashake.com/#reviews You need to have datashake API key to use this module</span></p>
-<p class="p4"><span class="s2"><b>Installation</b></span></p>
-<p class="p5"><span class="s2">pip install git+https://github.com/ilyavyakovlev/datashakereviewsapi</span></p>
-<p class="p4"><span class="s2"><b>Usage examples</b></span></p>
-<p class="p2"><span class="s2">Initiate API instance</span></p>
-<p class="p5"><span class="s2">from datashakereviewsapi import DatashakeReviewAPI</span></p>
-<p class="p6"><span class="s2"></span><br></p>
-<p class="p5"><span class="s2"># Initiate API instance with your API key from DATASHAKE</span></p>
-<p class="p5"><span class="s2">api = DatashakeReviewAPI('your_datashake_reviews_scraper_api_key')</span></p>
-<p class="p2"><span class="s2">Schedule a single job with a URL to review page. DATASHALE API takes several hours to crawl the page and collect the results.</span></p>
-<p class="p5"><span class="s2">response = api.schedule_job('https://uk.trustpilot.com/review/store.playstation.com')</span></p>
-<p class="p5"><span class="s2"># save job_id for querying the results later</span></p>
-<p class="p5"><span class="s2">first_job_id = response['job_id']</span></p>
-<p class="p2"><span class="s2">Get the job results - reviews</span></p>
-<p class="p5"><span class="s2">reviews = api.get_job_reviews(first_job_id)</span></p>
-<p class="p2"><span class="s2">Schedule another job with a reference to the first one - get delta (new reviews) only</span></p>
-<p class="p5"><span class="s2">response2 = api.schedule_job('https://uk.trustpilot.com/review/store.playstation.com',</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">                              </span>previous_job_id=first_job_id)</span></p>
-<p class="p2"><span class="s2">Create a job list (one row in the example) and schedule jobs for all the urls from the list</span></p>
-<p class="p5"><span class="s2">jobs_list = pd.DataFrame(columns=['Website', 'url', 'latest_job_id', 'status', 'last_crawl',</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">       </span>'latest_schedule_message'])</span></p>
-<p class="p5"><span class="s2">jobs_list['url'] = ['https://uk.trustpilot.com/review/store.playstation.com']</span></p>
-<p class="p5"><span class="s2">updated_job_list = api.schedule_job_list(jobs_list)</span></p>
-<p class="p2"><span class="s2">And ultimately - fetch the reviews and save them to a csv file, reschedule all jobs in the jobs list</span></p>
-<p class="p5"><span class="s2"># Plug-n-Play block to schedule/update jobs and get/save results</span></p>
-<p class="p5"><span class="s2"># The prerequisite for running the snippet is existence of two CSV files with the following structure:</span></p>
-<p class="p5"><span class="s2"># jobs_list.csv columns: ['Website', 'url', 'latest_job_id', 'status', 'last_crawl', 'latest_schedule_message']</span></p>
-<p class="p5"><span class="s2"># reviews_list.csv columns: ['job_id', 'source_name', 'id', 'name', 'date', 'rating_value',</span></p>
-<p class="p5"><span class="s2"># <span class="Apple-converted-space">                          </span>'review_text', 'url', 'profile_picture', 'location', 'review_title',</span></p>
-<p class="p5"><span class="s2"># <span class="Apple-converted-space">                          </span>'verified_order', 'reviewer_title', 'language_code', 'meta_data']</span></p>
-<p class="p6"><span class="s2"></span><br></p>
-<p class="p6"><span class="s2"></span><br></p>
-<p class="p5"><span class="s2"># Code block refresh review jobs and review results</span></p>
-<p class="p5"><span class="s2">jobs_list_filepath = 'job_list.csv'</span></p>
-<p class="p5"><span class="s2">reviews_list_filepath = 'reviews_list.csv'</span></p>
-<p class="p6"><span class="s2"></span><br></p>
-<p class="p5"><span class="s2">df_jobs = pd.read_csv(jobs_list_filepath, index_col='id')</span></p>
-<p class="p5"><span class="s2">df_reviews = pd.read_csv(reviews_list_filepath, index_col='unique_id')</span></p>
-<p class="p6"><span class="s2"></span><br></p>
-<p class="p5"><span class="s2">df_jobs_new, df_reviews_new = api.get_job_list_reviews(df_jobs, df_reviews)</span></p>
-<p class="p6"><span class="s2"></span><br></p>
-<p class="p5"><span class="s2">df_jobs_new.to_csv(jobs_list_filepath, encoding='utf-8-sig')</span></p>
-<p class="p5"><span class="s2">df_reviews_new.to_csv(reviews_list_filepath, encoding='utf-8-sig')</span></p>
-<p class="p6"><span class="s2"></span><br></p>
-<p class="p6"><span class="s2"></span><br></p>
-<p class="p5"><span class="s2"># Codes block to reschedule review jobs</span></p>
-<p class="p5"><span class="s2">df_jobs = pd.read_csv(jobs_list_filepath, index_col='id')</span></p>
-<p class="p5"><span class="s2">df_jobs_new = api.schedule_job_list(df_jobs)</span></p>
-<p class="p5"><span class="s2">df_jobs_new.to_csv(jobs_list_filepath, encoding='utf-8-sig')</span></p>
-<p class="p2"><span class="s2">This project is maintained by <a href="https://github.com/ilyavyakovlev"><span class="s5">ilyavyakovlev</span></a></span></p>
-<p class="p7"><span class="s2">Hosted on GitHub Pages — Theme by <a href="https://github.com/orderedlist"><span class="s6">orderedlist</span></a></span></p>
+<p class="p2"><span class="s1"><b>TEST</b></span></p>
+<p class="p2"><span class="s1"><a href="https://ilyavyakovlev.github.io/datashakereviewsapi/"><b>datashakereviewsapi</b><span class="s2"><b></b></span></a></span></p>
+<p class="p3"><span class="s3">Python API-wrapper for DATASHAKE reviews API</span></p>
+<p class="p4"><span class="s4"><a href="https://github.com/ilyavyakovlev/datashakereviewsapi">View the Project on GitHub <span class="s5">ilyavyakovlev/datashakereviewsapi</span></a></span></p>
+<p class="p5"><span class="s3"><b>datashakereviewsapi: python API-wrapper to DATASHAKE reviews</b></span></p>
+<p class="p3"><span class="s3">Python API-wrapper for DATASHAKE reviews API (https://www.datashake.com/review-scraper-api) This module makes it easier to schedule jobs and fetch the results Official web API documentation: https://api.datashake.com/#reviews You need to have datashake API key to use this module</span></p>
+<p class="p5"><span class="s3"><b>Installation</b></span></p>
+<p class="p6"><span class="s3">pip install git+https://github.com/ilyavyakovlev/datashakereviewsapi</span></p>
+<p class="p5"><span class="s3"><b>Usage examples</b></span></p>
+<p class="p3"><span class="s3">Initiate API instance</span></p>
+<p class="p6"><span class="s3">from datashakereviewsapi import DatashakeReviewAPI</span></p>
+<p class="p6"><span class="s3"><br>
+</span></p>
+<p class="p6"><span class="s3"># Initiate API instance with your API key from DATASHAKE</span></p>
+<p class="p6"><span class="s3">api = DatashakeReviewAPI('your_datashake_reviews_scraper_api_key')</span></p>
+<p class="p3"><span class="s3">Schedule a single job with a URL to review page. DATASHALE API takes several hours to crawl the page and collect the results.</span></p>
+<p class="p6"><span class="s3">response = api.schedule_job('https://uk.trustpilot.com/review/store.playstation.com')</span></p>
+<p class="p6"><span class="s3"># save job_id for querying the results later</span></p>
+<p class="p6"><span class="s3">first_job_id = response['job_id']</span></p>
+<p class="p3"><span class="s3">Get the job results - reviews</span></p>
+<p class="p6"><span class="s3">reviews = api.get_job_reviews(first_job_id)</span></p>
+<p class="p3"><span class="s3">Schedule another job with a reference to the first one - get delta (new reviews) only</span></p>
+<p class="p6"><span class="s3">response2 = api.schedule_job('https://uk.trustpilot.com/review/store.playstation.com',</span></p>
+<p class="p6"><span class="s3"><span class="Apple-converted-space">                              </span>previous_job_id=first_job_id)</span></p>
+<p class="p3"><span class="s3">Create a job list (one row in the example) and schedule jobs for all the urls from the list</span></p>
+<p class="p6"><span class="s3">jobs_list = pd.DataFrame(columns=['Website', 'url', 'latest_job_id', 'status', 'last_crawl',</span></p>
+<p class="p6"><span class="s3"><span class="Apple-converted-space">       </span>'latest_schedule_message'])</span></p>
+<p class="p6"><span class="s3">jobs_list['url'] = ['https://uk.trustpilot.com/review/store.playstation.com']</span></p>
+<p class="p6"><span class="s3">updated_job_list = api.schedule_job_list(jobs_list)</span></p>
+<p class="p3"><span class="s3">And ultimately - fetch the reviews and save them to a csv file, reschedule all jobs in the jobs list</span></p>
+<p class="p6"><span class="s3"># Plug-n-Play block to schedule/update jobs and get/save results</span></p>
+<p class="p6"><span class="s3"># The prerequisite for running the snippet is existence of two CSV files with the following structure:</span></p>
+<p class="p6"><span class="s3"># jobs_list.csv columns: ['Website', 'url', 'latest_job_id', 'status', 'last_crawl', 'latest_schedule_message']</span></p>
+<p class="p6"><span class="s3"># reviews_list.csv columns: ['job_id', 'source_name', 'id', 'name', 'date', 'rating_value',</span></p>
+<p class="p6"><span class="s3"># <span class="Apple-converted-space">                          </span>'review_text', 'url', 'profile_picture', 'location', 'review_title',</span></p>
+<p class="p6"><span class="s3"># <span class="Apple-converted-space">                          </span>'verified_order', 'reviewer_title', 'language_code', 'meta_data']</span></p>
+<p class="p6"><span class="s3"><br>
+</span></p>
+<p class="p6"><span class="s3"><br>
+</span></p>
+<p class="p6"><span class="s3"># Code block refresh review jobs and review results</span></p>
+<p class="p6"><span class="s3">jobs_list_filepath = 'job_list.csv'</span></p>
+<p class="p6"><span class="s3">reviews_list_filepath = 'reviews_list.csv'</span></p>
+<p class="p6"><span class="s3"><br>
+</span></p>
+<p class="p6"><span class="s3">df_jobs = pd.read_csv(jobs_list_filepath, index_col='id')</span></p>
+<p class="p6"><span class="s3">df_reviews = pd.read_csv(reviews_list_filepath, index_col='unique_id')</span></p>
+<p class="p6"><span class="s3"><br>
+</span></p>
+<p class="p6"><span class="s3">df_jobs_new, df_reviews_new = api.get_job_list_reviews(df_jobs, df_reviews)</span></p>
+<p class="p6"><span class="s3"><br>
+</span></p>
+<p class="p6"><span class="s3">df_jobs_new.to_csv(jobs_list_filepath, encoding='utf-8-sig')</span></p>
+<p class="p6"><span class="s3">df_reviews_new.to_csv(reviews_list_filepath, encoding='utf-8-sig')</span></p>
+<p class="p6"><span class="s3"><br>
+</span></p>
+<p class="p6"><span class="s3"><br>
+</span></p>
+<p class="p6"><span class="s3"># Codes block to reschedule review jobs</span></p>
+<p class="p6"><span class="s3">df_jobs = pd.read_csv(jobs_list_filepath, index_col='id')</span></p>
+<p class="p6"><span class="s3">df_jobs_new = api.schedule_job_list(df_jobs)</span></p>
+<p class="p6"><span class="s3">df_jobs_new.to_csv(jobs_list_filepath, encoding='utf-8-sig')</span></p>
+<p class="p3"><span class="s3">This project is maintained by <a href="https://github.com/ilyavyakovlev"><span class="s6">ilyavyakovlev</span></a></span></p>
+<p class="p7"><span class="s3">Hosted on GitHub Pages — Theme by <a href="https://github.com/orderedlist"><span class="s7">orderedlist</span></a></span></p>
 </body>
 </html>
