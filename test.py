@@ -1,14 +1,9 @@
 # -*- coding: utf-8 -*-
-"""
-Spyder Editor
 
-This is a temporary script file.
-"""
 import pytest
 from unittest import mock
 import datetime as dt
 import pandas as pd
-import pickle
 import requests
 from datashakereviewsapi._api import _prepare_date
 from datashakereviewsapi._api import APIResponseError
@@ -29,6 +24,15 @@ def get_api():
     return DatashakeReviewAPI('aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa')
 
 
+@pytest.fixture
+def get_job_list():
+    job_list = pd.DataFrame(columns=['Website', 'url', 'latest_job_id', 'status',
+                         'last_crawl', 'latest_schedule_message'])
+    job_list['url'] = ['test_url']
+    job_list['latest_job_id'] = ['1234']
+    return job_list
+
+
 class FakeResponse(requests.Request):
 
     def __init__(self, text):
@@ -37,10 +41,6 @@ class FakeResponse(requests.Request):
 
 
 def mocked_get_job_status_request():
-
-    with open('testdata/mock_job_status_response', 'rb') as file:
-        response = pickle.load(file)
-    response.__class__ = requests.models.Response
 
     return None
 
@@ -76,14 +76,21 @@ def test_get_job_reviews(get_api):
         api.get_job_reviews('fake_job_id')
 
 
-def test_schedule_job_list(get_api):
+def test_schedule_job_list(get_api, get_job_list):
 
     api = get_api
-
-    df = pd.DataFrame(columns=['Website', 'url', 'latest_job_id', 'status',
-                               'last_crawl', 'latest_schedule_message'])
-    df['url'] = ['test_url']
+    job_list = get_job_list
 
     with mock.patch('requests.request') as mocked_function:
         mocked_function.side_effect = mocked_get_job_status_request()
-        api.schedule_job_list(df)
+        api.schedule_job_list(job_list)
+
+
+def test_get_job_list(get_api, get_job_list):
+
+    api = get_api
+    job_list = get_job_list
+
+    with mock.patch('requests.request') as mocked_function:
+        mocked_function.side_effect = mocked_get_job_status_request()
+        api.get_job_list_reviews(job_list)
