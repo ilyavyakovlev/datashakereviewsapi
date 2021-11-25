@@ -1,11 +1,11 @@
 Metadata-Version: 2.1
 Name: datashakereviewsapi
-Version: 1.0
+Version: 1.1
 Summary: Python API to DATASHAKE reviews
 Home-page: https://github.com/ilyavyakovlev/datashakereviewsapi
 Author: Ilya Yakovlev
 Author-email: ilya.v.yakovlev@gmail.com
-License: MIT
+License: BSD-3
 Description: # datashakereviewsapi: python API to DATASHAKE reviews
         
         Python API to DATASHAKE reviews (https://www.datashake.com/review-scraper-api)
