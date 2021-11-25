@@ -3,9 +3,10 @@ import setuptools
 with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
+
 setuptools.setup(
     name='datashakereviewsapi',
-    version=1.2,
+    version=1.3,
     author='Ilya Yakovlev',
     author_email='ilya.v.yakovlev@gmail.com',
     description='Python API to DATASHAKE reviews',
