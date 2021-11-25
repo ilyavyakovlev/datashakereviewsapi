@@ -1,14 +1,14 @@
 Metadata-Version: 2.1
 Name: datashakereviewsapi
-Version: 1.1
+Version: 1.2
 Summary: Python API to DATASHAKE reviews
 Home-page: https://github.com/ilyavyakovlev/datashakereviewsapi
 Author: Ilya Yakovlev
 Author-email: ilya.v.yakovlev@gmail.com
 License: BSD-3
-Description: # datashakereviewsapi: python API to DATASHAKE reviews
+Description: # datashakereviewsapi: python API-wrapper for DATASHAKE reviews
         
-        Python API to DATASHAKE reviews (https://www.datashake.com/review-scraper-api)
+        Python API-wrapper for DATASHAKE reviews API (https://www.datashake.com/review-scraper-api)
         This module makes it easier to schedule jobs and fetch the results
         Official web API documentation: https://api.datashake.com/#reviews
         You need to have datashake API key to use this module
@@ -16,13 +16,15 @@ Description: # datashakereviewsapi: python API to DATASHAKE reviews
         
         ## Installation
         
-        Through cloning this repositary only. [at the moment]
+        ```sh
+        pip install datashakereviewsapi
+        ```
         
         ## Usage examples
         
         Initiate API instance
         ```sh
-        from datashakereviewsapi.datashakereviewsapi import DatashakeReviewAPI
+        from datashakereviewsapi import DatashakeReviewAPI
         
         # Initiate API instance with your API key from DATASHAKE
         api = DatashakeReviewAPI('your_datashake_reviews_scraper_api_key')
