@@ -9,7 +9,7 @@ You need to have datashake API key to use this module
 ## Installation
 
 ```sh
-pip install git+https://github.com/ilyavyakovlev/datashakereviewsapi
+pip install datashakereviewsapi
 ```
 
 ## Usage examples
