@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name='datashakereviewsapi',
-    version=1.0,
+    version=1.01,
     author='Ilya Yakovlev',
     author_email='ilya.v.yakovlev@gmail.com',
     description='Python API to DATASHAKE reviews',
@@ -13,7 +13,7 @@ setuptools.setup(
     long_description_content_type="text/markdown",
     url='https://github.com/ilyavyakovlev/datashakereviewsapi',
     keywords='python api to datashake reviews',
-    license='MIT',
+    license='BSD-3',
     packages=['datashakereviewsapi'],
     install_requires=['requests', 'pandas'],
 )
